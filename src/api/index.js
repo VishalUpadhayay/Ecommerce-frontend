@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Base URL - proxy in package.json routes /api to http://localhost:8080
 const API = axios.create({
-  baseURL: '/api',
+  baseURL: process.env.REACT_APP_API_URL || '/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
